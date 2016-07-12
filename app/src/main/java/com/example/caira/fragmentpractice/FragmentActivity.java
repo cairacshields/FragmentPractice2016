@@ -30,33 +30,5 @@ public class FragmentActivity extends AppCompatActivity {
         }
     }
 
-    public static class PlaceholderFragment extends Fragment{
 
-        public PlaceholderFragment(){
-
-        }
-
-        @Nullable
-        @Override
-        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-            View rootView = inflater.inflate(R.layout.my_fragment, container, false);
-            ListView LV = (ListView)rootView.findViewById(R.id.list_view);
-
-            String[] names ={
-                    "Hailey",
-                    "Blake",
-                    "Valery",
-                    "Winter",
-                    "Mel",
-                    "James"
-            };
-            List<String> list = new ArrayList<>(
-                    Arrays.asList(names)
-            );
-            ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getContext(), R.layout.my_fragment, R.id.text_view, list);
-            LV.setAdapter(arrayAdapter);
-            return rootView;
-        }
-    }
 }
