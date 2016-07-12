@@ -7,12 +7,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class FragmentActivity extends AppCompatActivity {
 
@@ -30,5 +24,18 @@ public class FragmentActivity extends AppCompatActivity {
         }
     }
 
+    public static class PlaceholderFragment extends Fragment{
 
+        public PlaceholderFragment(){
+
+        }
+
+        @Nullable
+        @Override
+        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
+            View rootView = inflater.inflate(R.layout.my_fragment, container, false);
+            return rootView;
+        }
+    }
 }
