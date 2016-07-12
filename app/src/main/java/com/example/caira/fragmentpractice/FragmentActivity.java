@@ -18,24 +18,12 @@ public class FragmentActivity extends AppCompatActivity {
         PlaceholderFragment newFragment = new PlaceholderFragment();
 
         if(savedInstanceState == null) {
+            //Begin Fragment Transaction using the Fragment Manager
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, newFragment)
+                    //Remember to commit all changes to fragment in Java Code 
                     .commit();
         }
     }
 
-    public static class PlaceholderFragment extends Fragment{
-
-        public PlaceholderFragment(){
-
-        }
-
-        @Nullable
-        @Override
-        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-            View rootView = inflater.inflate(R.layout.my_fragment, container, false);
-            return rootView;
-        }
-    }
-}
+  
